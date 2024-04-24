@@ -1,0 +1,2 @@
+ollama:
+  externalHost: "http://ollama:11434"

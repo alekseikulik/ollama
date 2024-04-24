@@ -1,0 +1,7 @@
+ollama:
+  gpu:
+    # -- Enable GPU integration
+    enabled: false
+  # -- List of models to pull at container startup
+  models: 
+    - gemma:2b

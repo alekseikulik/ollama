@@ -1,0 +1,7 @@
+environments:
+  default:
+    values: []
+    kubeContext: colima
+  prod:
+    values: []
+    kubeContext: gke_devops-oi_europe-west3-a_devops  # Just for example

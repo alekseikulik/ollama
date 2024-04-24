@@ -1,0 +1,29 @@
+bases:
+  - ./environments.yaml
+
+---
+repositories:
+  - name: ollama-helm
+    url: https://otwld.github.io/ollama-helm/
+  - name: open-webui
+    url: git+https://github.com/open-webui/open-webui/@kubernetes/helm?ref=main
+
+templates:
+  default:
+    namespace: ollama
+    values:
+      - environments/{{ .Environment.Name }}/{{`{{ .Release.Name }}`}}.yaml
+
+releases:
+- name: ollama  # https://artifacthub.io/packages/helm/ollama-helm/ollama
+  chart: ollama-helm/ollama
+  version: 0.23.0
+  inherit:
+    - template: default
+
+- name: open-webui  # https://github.com/open-webui/open-webui/tree/main/kubernetes/helm
+  chart: open-webui/open-webui
+  needs:
+    - ollama
+  inherit:
+    - template: default

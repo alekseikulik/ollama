@@ -1,6 +1,6 @@
 # Ollama LLM
 
-This project contain files to deploy Ollama and WebUI
+This project contain files to deploy [Ollama](https://github.com/ollama/ollama) and [Open WebUI](https://github.com/open-webui/open-webui)
 
 ## TLDR
 

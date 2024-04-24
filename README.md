@@ -8,7 +8,7 @@ Helmfile configured by default to deploy the bundle to your local Kubernetes clu
 
 ```bash
 # Start local Kubernetes cluster
-clima kubernetes start
+colima kubernetes start
 
 # Deploy the bundle. Add "-i" to enable interactive mode
 helmfile apply

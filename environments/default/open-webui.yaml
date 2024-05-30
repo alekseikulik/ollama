@@ -1,2 +1,8 @@
 ollama:
-  externalHost: "http://ollama:11434"
+  enabled: false
+ollamaUrls: ["http://ollama:11434"]
+ingress:
+  enabled: true
+  annotations:
+    traefik.ingress.kubernetes.io/router.entrypoints: web
+  host: ollama-web.colima.lcl

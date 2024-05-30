@@ -25,6 +25,7 @@ releases:
 # https://github.com/open-webui/helm-charts
 - name: open-webui
   chart: open-webui/open-webui
+  version: 2.1.0
   needs:
     - ollama
   inherit:
